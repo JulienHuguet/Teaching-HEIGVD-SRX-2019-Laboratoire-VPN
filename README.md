@@ -23,13 +23,13 @@ Dans ce travail de laboratoire, vous allez configurer des routeurs Cisco émulé
 ### Les aspects abordés
 
 -	Contrôle de fonctionnement de l’infrastructure
--	Contrôle du DHCP serveur hébergé sur le routeur
--	Gestion des routeurs en console
--	Capture Sniffer avec filtres précis sur la communication à épier
--	Activation du mode « debug » pour certaines fonctions du routeur
--	Observation des protocoles IPSec
- 
- 
+		Contrôle du DHCP serveur hébergé sur le routeur
+		Gestion des routeurs en console
+		Capture Sniffer avec filtres précis sur la communication à épier
+		Activation du mode « debug » pour certaines fonctions du routeur
+		Observation des protocoles IPSec
+
+
 ## Matériel
 
 La manière la plus simple de faire ce laboratoire est dans les machines des salles de labo. Le logiciel d'émulation c'est eve-ng. Vous trouverez un [guide très condensé](files/Fonctionnement_EVE-NG.pdf) pour l'utilisation de eve-ng ici.
@@ -92,7 +92,7 @@ Un « protocol » différent de `up` indique la plupart du temps que l’interfa
 
 ---
 
-**Réponse :**  
+**Réponse :**  Non, nous n'avons rencontré aucun problème. Les différents périphériques ont démarré normalement et les commandes on produit les résultats attendu.
 
 ---
 
@@ -129,7 +129,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  
+**Réponse :**  Oui, tous les ping on fonctionné correctement.
 
 ---
 
@@ -145,7 +145,7 @@ R2# debug ip icmp
 Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur R1 avec son IP=193.100.100.1 depuis votre « VPC ». Durant cette opération vous tenterez d’obtenir en simultané les informations suivantes :
 
 -	Une trace sniffer (Wireshark) à la sortie du routeur R2 vers Internet. Si vous ne savez pas utiliser Wireshark avec eve-ng, référez-vous au document explicatif eve-ng. Le filtre de **capture** (attention, c'est un filtre de **capture** et pas un filtre d'affichage) suivant peut vous aider avec votre capture : `ip host 193.100.100.1`. 
--	Les messages de R1 avec `debug ip icmp`.
+		Les messages de R1 avec `debug ip icmp`.
 
 
 **Question 3: Montrez vous captures**
@@ -153,6 +153,10 @@ Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur
 ---
 
 **Screenshots :**  
+
+![Question_3_wireshark_R2ToInternet](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_3_wireshark_R2ToInternet.PNG)
+
+![Question_3_debug_icmp_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_3_debug_icmp_R1.PNG)
 
 ---
 
@@ -225,6 +229,16 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 **Réponse :**  
 
+Configuration R1
+
+![Question_4_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_4_R1.PNG)
+
+Configuration R2
+
+![Question_4_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_4_R2.PNG)
+
+
+
 ---
 
 
@@ -233,6 +247,16 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 ---
 
 **Réponse :**  
+
+Configuration R1
+
+![Question_5_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_5_R1.PNG)
+
+Configuration R2
+
+![Question_5_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_5_R2.PNG)
+
+
 
 ---
 
@@ -327,13 +351,33 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 **Réponse :**  
 
+Configuration R1
+
+![Question6_configuration_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_configuration_R1.PNG)
+
+Configuration R2
+
+![Question6_configuration_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_configuration_R2.PNG)
+
+Ping entre le VPC et la loopback du routeur R1
+
+![Question6_R1_icmp_debug](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_R1_icmp_debug.PNG)
+
+Capture Wireshark entre R2 et Internet
+
+![Question6_wireshark_R2ToInternet](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_wireshark_R2ToInternet.PNG)
+
+
+
 ---
 
 **Question 7: Reportez dans votre rapport une petite explication concernant les différents « timers » utilisés par IKE et IPsec dans cet exercice (recherche Web). :**
 
 ---
 
-**Réponse :**  
+**Réponse :**  Les VPNS utilisant IKE utilisent des timers dans le but de vérifier si un tunnel VPN est expiré (c’est-à-direqu’il faut le recréer).
+
+Par exemple, lors de laconfiguration précédente, nous avons spécifier le « lifetime » de 300 secondes pour la clé de chiffrement du lien. Une fois ces 300 secondes terminées, une nouvelle clé va être créée. 
 
 ---
 
