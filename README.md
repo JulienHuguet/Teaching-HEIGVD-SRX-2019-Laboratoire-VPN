@@ -237,7 +237,7 @@ Configuration R2
 
 ![Question_4_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_4_R2.PNG)
 
-
+Les résultats des commandes show, nous permet d'avoir un résumé de la configuration effectuée plus haut. 
 
 ---
 
@@ -256,7 +256,7 @@ Configuration R2
 
 ![Question_5_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_5_R2.PNG)
 
-
+La commande permet d'afficher les adresses IP des hôtes concerné par le protocole IKE.
 
 ---
 
@@ -367,7 +367,7 @@ Capture Wireshark entre R2 et Internet
 
 ![Question6_wireshark_R2ToInternet](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_wireshark_R2ToInternet.PNG)
 
-
+Les configurations effectuées sur les deux routeurs fonctionne correctement.
 
 ---
 
@@ -375,9 +375,9 @@ Capture Wireshark entre R2 et Internet
 
 ---
 
-**Réponse :**  Les VPNS utilisant IKE utilisent des timers dans le but de vérifier si un tunnel VPN est expiré (c’est-à-direqu’il faut le recréer).
+**Réponse :**  Les VPNS utilisant IKE utilisent des timers dans le but de vérifier si un tunnel VPN est expiré (c’est-à-dire qu’il faut le recréer).
 
-Par exemple, lors de laconfiguration précédente, nous avons spécifier le « lifetime » de 300 secondes pour la clé de chiffrement du lien. Une fois ces 300 secondes terminées, une nouvelle clé va être créée. 
+Par exemple, lors de la configuration précédente, nous avons spécifier le « lifetime » de 300 secondes pour la clé de chiffrement du lien. Une fois ces 300 secondes terminées, une nouvelle clé va être créée. 
 
 ---
 
@@ -391,7 +391,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Nous avons utilisé IKE avec IPSec et ESP pour l'encapsulation
 
 ---
 
@@ -400,7 +400,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Nous avons utilisé le mode tunnel dans cette configuration
 
 ---
 
@@ -409,7 +409,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  En mode tunnel, tout ce qui se trouve après l'entête IPSec est chiffrée (l'entête IP, l'entête TCP et les données). Algorithme AES 192 bits
 
 ---
 
@@ -418,7 +418,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  En mode tunnel, tout le paquet est authentifié sauf l'entête IP se trouvant avant l'entête IPSec. Algorithme SHA-1.
 
 ---
 
@@ -427,6 +427,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Tout le paquet est protégé en intégrité. Algorithme utilisé SHA-1.
 
 ---
