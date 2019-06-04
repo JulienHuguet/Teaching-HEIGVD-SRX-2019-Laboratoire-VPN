@@ -361,7 +361,7 @@ Configuration R2
 
 Ping entre le VPC et la loopback du routeur R1
 
-![Question6_R1_icmp_debug]images/Question6_R1_icmp_debug.PNG)
+![Question6_R1_icmp_debug](images/Question6_R1_icmp_debug.PNG)
 
 Capture Wireshark entre R2 et Internet
 
