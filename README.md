@@ -154,9 +154,9 @@ Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur
 
 **Screenshots :**  
 
-![Question_3_wireshark_R2ToInternet](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_3_wireshark_R2ToInternet.PNG)
+![Question_3_wireshark_R2ToInternet](images/Question_3_wireshark_R2ToInternet.PNG)
 
-![Question_3_debug_icmp_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_3_debug_icmp_R1.PNG)
+![Question_3_debug_icmp_R1](images/Question_3_debug_icmp_R1.PNG)
 
 ---
 
@@ -231,11 +231,11 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 Configuration R1
 
-![Question_4_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_4_R1.PNG)
+![Question_4_R1](images/Question_4_R1.PNG)
 
 Configuration R2
 
-![Question_4_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_4_R2.PNG)
+![Question_4_R2](images/Question_4_R2.PNG)
 
 Les résultats des commandes show, nous permet d'avoir un résumé de la configuration effectuée plus haut. 
 
@@ -250,11 +250,11 @@ Les résultats des commandes show, nous permet d'avoir un résumé de la configu
 
 Configuration R1
 
-![Question_5_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_5_R1.PNG)
+![Question_5_R1](images/Question_5_R1.PNG)
 
 Configuration R2
 
-![Question_5_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question_5_R2.PNG)
+![Question_5_R2](images/Question_5_R2.PNG)
 
 La commande permet d'afficher les adresses IP des hôtes concerné par le protocole IKE.
 
@@ -353,19 +353,19 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 Configuration R1
 
-![Question6_configuration_R1](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_configuration_R1.PNG)
+![Question6_configuration_R1](images/Question6_configuration_R1.PNG)
 
 Configuration R2
 
-![Question6_configuration_R2](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_configuration_R2.PNG)
+![Question6_configuration_R2](images/Question6_configuration_R2.PNG)
 
 Ping entre le VPC et la loopback du routeur R1
 
-![Question6_R1_icmp_debug](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_R1_icmp_debug.PNG)
+![Question6_R1_icmp_debug](images/Question6_R1_icmp_debug.PNG)
 
 Capture Wireshark entre R2 et Internet
 
-![Question6_wireshark_R2ToInternet](C:\Users\Julien\Teaching-HEIGVD-SRX-2019-Laboratoire-VPN\images\Question6_wireshark_R2ToInternet.PNG)
+![Question6_wireshark_R2ToInternet](images/Question6_wireshark_R2ToInternet.PNG)
 
 Les configurations effectuées sur les deux routeurs fonctionne correctement.
 
