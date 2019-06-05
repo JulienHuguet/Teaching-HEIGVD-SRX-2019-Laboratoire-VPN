@@ -92,7 +92,7 @@ Un « protocol » différent de `up` indique la plupart du temps que l’interfa
 
 ---
 
-**Réponse :**  Non, nous n'avons rencontré aucun problème. Les différents périphériques ont démarré normalement et les commandes on produit les résultats attendu.
+**Réponse :**  Non, nous n'avons rencontré aucun problème. Les différents périphériques ont démarré normalement et les commandes ont produit les résultats attendus.
 
 ---
 
@@ -129,7 +129,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  Oui, tous les ping on fonctionné correctement.
+**Réponse :**  Oui, tous les pings ont fonctionné correctement.
 
 ---
 
@@ -237,7 +237,7 @@ Configuration R2
 
 ![Question_4_R2](images/Question_4_R2.PNG)
 
-Les résultats des commandes show, nous permet d'avoir un résumé de la configuration effectuée plus haut. 
+Les résultats des commandes show nous permettent d'avoir un résumé de la configuration effectuée plus haut. 
 
 ---
 
@@ -256,7 +256,7 @@ Configuration R2
 
 ![Question_5_R2](images/Question_5_R2.PNG)
 
-La commande permet d'afficher les adresses IP des hôtes concerné par le protocole IKE.
+La commande permet d'afficher les adresses IP des hôtes concernés par le protocole IKE.
 
 ---
 
@@ -367,7 +367,7 @@ Capture Wireshark entre R2 et Internet
 
 ![Question6_wireshark_R2ToInternet](images/Question6_wireshark_R2ToInternet.PNG)
 
-Les configurations effectuées sur les deux routeurs fonctionne correctement.
+Les configurations effectuées sur les deux routeurs fonctionnent correctement.
 
 ---
 
